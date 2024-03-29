@@ -12,6 +12,7 @@ import { Toaster } from "@/components/ui/toaster";
 import { configureChains, mainnet, createConfig, WagmiConfig } from "wagmi";
 import { publicProvider } from "wagmi/providers/public";
 import {
+  sepolia,
   arbitrum,
   baseGoerli,
   goerli,
@@ -26,6 +27,7 @@ import {
 
 const { chains, publicClient, webSocketPublicClient } = configureChains(
   [
+    sepolia,
     goerli,
     scrollSepolia,
     baseGoerli,
@@ -41,8 +43,8 @@ const { chains, publicClient, webSocketPublicClient } = configureChains(
 );
 
 const { connectors } = getDefaultWallets({
-  appName: "Zero Fi",
-  projectId: "YOUR_PROJECT_ID",
+  appName: "ZeroFi",
+  projectId: "4e86000476eeab593dbf69e0262c5557",
   chains,
 });
 
